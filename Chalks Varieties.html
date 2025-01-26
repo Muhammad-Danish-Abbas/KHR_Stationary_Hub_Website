@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pens Varieties | KHR Stationery Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto; /* Allow scrolling for the page */
+       
+        }
+        .chalk-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #019ac9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chalk-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .chalk-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .chalk-item {
+            width: 250px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chalk-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .chalk-item h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .chalk-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .chalk-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 10px;
+        }
+
+        .order-button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .order-button:hover {
+            background-color: #ce4949;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header id="site-header">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="KHR Stationery Hub Logo" id="site-logo">
+                <h1>KHR Stationery</h1>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="Order_now.html">Order_now</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn" id="stationery-button">Stationery Items</button>
+                    <div id="stationery-list" class="dropdown-content hidden">
+                        <!-- Items will be dynamically added here -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="chalk-container">
+            <h2>Chalks Varieties</h2>
+            <div class="chalk-grid">
+                <!-- Chalk 1 -->
+                <div class="chalk-item">
+                    <img src="images/White Chalk.jpeg" alt="White Chalk">
+                    <h3>White Chalk</h3>
+                    <p>Classic white chalk perfect for blackboards. Smooth writing experience.</p>
+                    <p class="chalk-price">$2.99</p>
+                    <button class="order-button" onclick="location.href='order_now.html'">Order Now</button>
+                </div>
+                <!-- Chalk 2 -->
+                <div class="chalk-item">
+                    <img src="images/Colored Chalk.jpeg" alt="Colored Chalk">
+                    <h3>Colored Chalk</h3>
+                    <p>Vibrant colored chalk for creative use on blackboards or whiteboards.</p>
+                    <p class="chalk-price">$3.99</p>
+                    <button class="order-button" onclick="location.href='order_now.html'">Order Now</button>
+                </div>
+                <!-- Chalk 3 -->
+                <div class="chalk-item">
+                    <img src="images/Dustless Chalk.jpeg" alt="Dustless Chalk">
+                    <h3>Dustless Chalk</h3>
+                    <p>Chalk that produces minimal dust, ideal for a cleaner writing surface.</p>
+                    <p class="chalk-price">$4.49</p>
+                    <button class="order-button" onclick="location.href='order_now.html'">Order Now</button>
+                </div>
+                <!-- Chalk 4 -->
+                <div class="chalk-item">
+                    <img src="images/Non-toxic Chalk.webp" alt="Non-toxic Chalk">
+                    <h3>Non-toxic Chalk</h3>
+                    <p>Safe for use, especially in schools. Non-toxic and child-friendly.</p>
+                    <p class="chalk-price">$3.49</p>
+                    <button class="order-button" onclick="location.href='order_now.html'">Order Now</button>
+                </div>
+                <!-- Add more chalk varieties as needed -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <footer>
+            <div class="footer-container">
+               
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Stationery Lane, Creativity City</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> support@khrstationery.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to stay updated on the latest offers and products!</p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyK1MKy5TYDRgdGDw4khLTE5Nys_PBgBmYAfL&q=facebook&rlz=1C1CHZN_enPK1132PK1132&oq=face&gs_lcrp=EgZjaHJvbWUqGAgCEC4YQxiDARjHARixAxjRAxiABBiKBTIOCAAQRRgnGDsYgAQYigUyDAgBEEUYORixAxiABDIYCAIQLhhDGIMBGMcBGLEDGNEDGIAEGIoFMgwIAxAAGEMYgAQYigUyDQgEEAAYgwEYsQMYgAQyDwgFEAAYQxixAxiABBiKBTISCAYQABhDGIMBGLEDGIAEGIoFMgcIBxAAGI8CMgcICBAAGI8C0gEJNjUzNWoxajE1qAIIsAIB&sourceid=chrome&ie=UTF-8"><i class="fab fa-facebook-f"></i>facebook</a>
+                    <a href="https://www.ltgawards.com/article/twitter-login/"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="https://www.instagram.com/accounts/login/?next=%2Fproud.mp%2Ffeed%2F&source=profile_feed_tab"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.linkedin.com/company/login"><i class="fab fa-linkedin-in"></i>linkedin</a>
+                </div>
+                <p>&copy; <span id="current-year"></span> KHR Stationery Hub. All rights reserved.</p>
+                <button id="back-to-top">Back to Top</button>
+            </div>
+        </footer>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown list container and button
+            const stationeryButton = document.getElementById('stationery-button');
+            const stationeryList = document.getElementById('stationery-list');
+
+            // List of 50 stationery items
+            const items = [
+                'Pen', 'Pencil', 'Notebook', 'Eraser', 'Sharpener', 'Marker', 'Highlighter', 'Scissors', 'Ruler', 'Glue Stick',
+                'Tape', 'Stapler', 'Paper Clips', 'Binder', 'Index Cards', 'Whiteboard', 'Chalk', 'Calculator', 'Protractor', 'Compass',
+                'Post-it Notes', 'Envelope', 'File Folders', 'Sticky Tabs', 'Correction Fluid', 'Letter Opener', 'Puncher', 'Label Maker', 'Binder Clips',
+                'Paper Cutter', 'Filing Cabinet', 'Desk Organizer', 'Notepad', 'Drawing Pad', 'Graph Paper', 'Colored Pencils', 'Crayons', 'Watercolor Paints',
+                'Paint Brushes', 'Glitter', 'Colored Markers', 'Art Paper', 'Clipboard', 'Rubber Bands', 'Stamps', 'Ink Pads', 'Stamping Tool', 'Paper Tray'
+            ];
+
+            // Dynamically add items to the dropdown menu
+            items.forEach(function(item) {
+                const a = document.createElement('a'); // Create a new anchor tag for each item
+                a.href = '#'; // Set the href to '#'
+                a.textContent = item; // Set the text content of the item
+                stationeryList.appendChild(a); // Append the anchor tag to the dropdown
+            });
+
+            // Toggle the display of the dropdown list on button click
+            stationeryButton.addEventListener('click', function(event) {
+                // Prevent event propagation to stop closing the dropdown immediately
+                event.stopPropagation();
+                
+                // Toggle the visibility of the dropdown
+                stationeryList.classList.toggle('show');
+            });
+
+            // Close the dropdown if the user clicks outside of it
+            document.addEventListener('click', function(event) {
+                if (!stationeryButton.contains(event.target) && !stationeryList.contains(event.target)) {
+                    stationeryList.classList.remove('show');
+                }
+            });
+        });
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = images.length;
+        const intervalTime = 3000; // 3 seconds
+
+        // Update the slide position and dot highlight
+        function updateSlider() {
+            slides.style.transform = `translateX(${-currentIndex * 100}%)`; // Move slides by width
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        // Go to the next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides; // Loop to the start
+            updateSlider();
+        }
+
+        // Go to the previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop to the end
+            updateSlider();
+        }
+
+        // Dot navigation functionality
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        // Navigation button event listeners
+        document.getElementById('next').addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide(); // Reset the auto-slide timer
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide(); // Reset the auto-slide timer
+        });
+
+        // Auto-slide functionality
+        let autoSlide = setInterval(nextSlide, intervalTime);
+
+        // Reset auto-slide timer when navigating manually
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, intervalTime);
+        }
+
+        // Adjust slider on window resize
+        window.addEventListener('resize', updateSlider);
+
+        // Initial update
+        updateSlider();
+    </script>
+    <script>
+        // Visitor Counter Functionality
+        const visitorCountElement = document.getElementById('visitor-count');
+    
+        // Get the current count from local storage or initialize to 0
+        let visitorCount = localStorage.getItem('visitorCount') || 0;
+    
+        // Increment the count
+        visitorCount++;
+    
+        // Update the local storage
+        localStorage.setItem('visitorCount', visitorCount);
+    
+        // Function to animate the count increment
+        const animateCount = (element, endValue) => {
+            let startValue = 0;
+            const duration = 1000; // Duration of animation in milliseconds
+            const increment = endValue / (duration / 20); // Calculate increment for smooth transition
+    
+            const counterInterval = setInterval(() => {
+                startValue += increment;
+                if (startValue >= endValue) {
+                    element.textContent = Math.round(endValue);
+                    clearInterval(counterInterval);
+                } else {
+                    element.textContent = Math.round(startValue);
+                }
+            }, 20);
+        };
+    
+        // Animate the count display
+        animateCount(visitorCountElement, visitorCount);
+         // Smooth Scroll to Top
+    const backToTopButton = document.getElementById('back-to-top');
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
+    </script>
+</body>
+</html>

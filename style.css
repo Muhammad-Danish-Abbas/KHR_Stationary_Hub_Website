@@ -1,0 +1,399 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecd6a4;
+
+}
+
+/* Header Styles */
+#site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo Image */
+#site-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Rounded logo */
+    animation: logoSpin 10s linear infinite; /* Dynamic spinning animation */
+    transition: transform 0.9s ease-in-out;
+}
+
+/* Logo Animation */
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Logo Hover Effect */
+.logo-container:hover #site-logo {
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+/* Header Title */
+.logo-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a, .dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+nav ul li a:hover, .dropbtn:hover {
+    background-color: #019ac9;
+            text-decoration: underline;
+}
+
+nav ul li.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;  /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    max-height: 300px; /* Set maximum height to prevent overflow */
+    overflow-y: auto; /* Allow scrolling if there are many items */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    min-height: 70vh;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section form input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-section form button:hover {
+    background-color: #218838;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.social-icons a:hover {
+    color: #28a745;
+}
+
+#back-to-top {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color: #218838;
+}
+.newsletter {
+    background-color:#019ac9;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #218838;
+}
+/* Visitor Counter Styles */
+#visitor-counter {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 30px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation for hovering over the counter */
+#visitor-counter:hover {
+    transform: scale(1.05);
+}
+
+/* Visitor Info */
+.visitor-info p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin: 15px 0;
+    animation: fadeIn 2s ease;
+}
+
+/* Animated Count */
+.animated-count {
+    color: #28a745;
+    font-size: 24px;
+    font-weight: bold;
+    animation: bounce 1.5s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Feedback Emojis */
+.feedback-emojis {
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.feedback-emojis:hover {
+    transform: scale(1.2);
+}
+
+/* Form Styles */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+
+#submit-btn {
+    background-color: #333;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

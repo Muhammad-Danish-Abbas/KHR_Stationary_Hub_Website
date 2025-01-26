@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | KHR Stationery Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto; /* Allow scrolling for the page */
+            background-color: #f7dda5;
+                   }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a, .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover, .dropbtn:hover {
+            background-color: #019ac9;
+            text-decoration: underline;
+        }
+
+        nav ul li.dropdown {
+    position: relative;
+}
+
+        .dropdown-content {
+            display: none;  /* Initially hidden */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            max-height: 300px; /* Set maximum height to prevent overflow */
+            overflow-y: auto; /* Allow scrolling if there are many items */
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+           
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it is above other elements */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* Additional Styles for the Dropdown */
+        .dropdown-content {
+            width: 200px; /* Set a fixed width for the dropdown */
+        }
+
+        /* Content styling */
+        main {
+            padding: 20px;
+            margin-top: 60px; /* Add space for the fixed header */
+            margin-bottom: 50px; /* Add space for the fixed footer */
+            padding-bottom: 60px; /* Ensure enough space for footer */
+        }
+        .test{
+            height: 100px;
+            width: 100px;
+            color: red;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecd6a4;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* Hero Section with Slides */
+        .hero {
+            position: relative;
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 10px;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+        }
+
+        .hero-text button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero-text button:hover {
+            background-color: #218838;
+        }
+
+        /* Featured Products Section */
+        .featured-products {
+            margin-top: 30px;
+        }
+
+        .featured-products h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-item {
+            width: 250px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-item h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .map-container h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-color:#019ac9;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 60%;
+            max-width: 300px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header id="site-header">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="KHR Stationery Hub Logo" id="site-logo">
+                <h1>KHR Stationery</h1>
+            </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="Order_now.html">Order_now</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn" id="stationery-button">Stationery Items</button>
+                    <div id="stationery-list" class="dropdown-content hidden">
+                        <!-- Items will be dynamically added here -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <section class="hero">
+                <div class="slides">
+                    <img src="images/silde5.webp" alt="Stationery Slide 1" class="active">
+                    <img src="images/sild3.png" alt="Stationery Slide 2">
+                    <img src="images/silde7.webp" alt="Stationery Slide 3">
+                </div>
+                <div class="hero-text">
+                    <h1>Welcome to KHR Stationery Hub</h1>
+                    <p>Your one-stop shop for high-quality stationery items!</p>
+                    <button onclick="location.href='about.html'">Learn More</button>
+                </div>
+            </section>
+            <section class="featured-products">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <!-- Products -->
+                    <div class="product-item">
+                        <img src="images/Pens1.jpg" alt="Pens">
+                        <h3>Pens</h3>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Notebooks.jpeg" alt="Notebooks">
+                        <h3>Notebooks</h3>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Rubber Eraser.jpeg" alt="Erasers">
+                        <h3>Erasers</h3>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Colorful Markers.jpeg" alt="Markers">
+                        <h3>Markers</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="map-container">
+                <h2>Visit Us</h2>
+                <p>Find us at our store location below:</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093854!2d144.9630579155779!3d-37.81627974202106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727b0a5f45e90!2sGoogle!5e0!3m2!1sen!2sus!4v1609300449287!5m2!1sen!2sus" 
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+                <section id="visitor-counter">
+                    <h2>Welcome to KHR Stationery Hub!</h2>
+                    <p>Explore our collection of high-quality stationery items.</p>
+                    <div class="visitor-info">
+                        <p>
+                            You are visitor number: 
+                            <span id="visitor-count" class="animated-count">0</span>
+                        </p>
+                    </div>
+                </section>
+                
+                
+            </section>
+            
+    </main>
+
+    <footer>
+        <footer>
+            <div class="footer-container">
+               
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Stationery Lane, Creativity City</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> support@khrstationery.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to stay updated on the latest offers and products!</p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyK1MKy5TYDRgdGDw4khLTE5Nys_PBgBmYAfL&q=facebook&rlz=1C1CHZN_enPK1132PK1132&oq=face&gs_lcrp=EgZjaHJvbWUqGAgCEC4YQxiDARjHARixAxjRAxiABBiKBTIOCAAQRRgnGDsYgAQYigUyDAgBEEUYORixAxiABDIYCAIQLhhDGIMBGMcBGLEDGNEDGIAEGIoFMgwIAxAAGEMYgAQYigUyDQgEEAAYgwEYsQMYgAQyDwgFEAAYQxixAxiABBiKBTISCAYQABhDGIMBGLEDGIAEGIoFMgcIBxAAGI8CMgcICBAAGI8C0gEJNjUzNWoxajE1qAIIsAIB&sourceid=chrome&ie=UTF-8"><i class="fab fa-facebook-f"></i>facebook</a>
+                    <a href="https://www.ltgawards.com/article/twitter-login/"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="https://www.instagram.com/accounts/login/?next=%2Fproud.mp%2Ffeed%2F&source=profile_feed_tab"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.linkedin.com/company/login"><i class="fab fa-linkedin-in"></i>linkedin</a>
+                </div>
+                <p>&copy; <span id="current-year"></span> KHR Stationery Hub. All rights reserved.</p>
+                <button id="back-to-top">Back to Top</button>
+            </div>
+        </footer>
+        
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown list container and button
+            const stationeryButton = document.getElementById('stationery-button');
+            const stationeryList = document.getElementById('stationery-list');
+
+            // List of 50 stationery items
+            const items = [
+                'Pen', 'Pencil', 'Notebook', 'Eraser', 'Sharpener', 'Marker', 'Highlighter', 'Scissors', 'Ruler', 'Glue Stick',
+                'Tape', 'Stapler', 'Paper Clips', 'Binder', 'Index Cards', 'Whiteboard', 'Chalk', 'Calculator', 'Protractor', 'Compass',
+                'Post-it Notes', 'Envelope', 'File Folders', 'Sticky Tabs', 'Correction Fluid', 'Letter Opener', 'Puncher', 'Label Maker', 'Binder Clips',
+                'Paper Cutter', 'Filing Cabinet', 'Desk Organizer', 'Notepad', 'Drawing Pad', 'Graph Paper', 'Colored Pencils', 'Crayons', 'Watercolor Paints',
+                'Paint Brushes', 'Glitter', 'Colored Markers', 'Art Paper', 'Clipboard', 'Rubber Bands', 'Stamps', 'Ink Pads', 'Stamping Tool', 'Paper Tray'
+            ];
+
+            // Dynamically add items to the dropdown menu
+            items.forEach(function(item) {
+                const a = document.createElement('a'); // Create a new anchor tag for each item
+                a.href = '#'; // Set the href to '#'
+                a.textContent = item; // Set the text content of the item
+                stationeryList.appendChild(a); // Append the anchor tag to the dropdown
+            });
+
+            // Toggle the display of the dropdown list on button click
+            stationeryButton.addEventListener('click', function(event) {
+                // Prevent event propagation to stop closing the dropdown immediately
+                event.stopPropagation();
+                
+                // Toggle the visibility of the dropdown
+                stationeryList.classList.toggle('show');
+            });
+
+            // Close the dropdown if the user clicks outside of it
+            document.addEventListener('click', function(event) {
+                if (!stationeryButton.contains(event.target) && !stationeryList.contains(event.target)) {
+                    stationeryList.classList.remove('show');
+                }
+            });
+        });
+       
+
+        // Go to the next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides; // Loop to the start
+            updateSlider();
+        }
+
+        // Go to the previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop to the end
+            updateSlider();
+        }
+
+        // Dot navigation functionality
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        // Navigation button event listeners
+        document.getElementById('next').addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide(); // Reset the auto-slide timer
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide(); // Reset the auto-slide timer
+        });
+
+        // Auto-slide functionality
+        let autoSlide = setInterval(nextSlide, intervalTime);
+
+        // Reset auto-slide timer when navigating manually
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, intervalTime);
+        }
+
+        // Adjust slider on window resize
+        window.addEventListener('resize', updateSlider);
+
+        // Initial update
+        updateSlider();
+    </script>
+    <script>
+        // JavaScript for automatic slides
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+    </script>
+    <script>
+    
+    // Update Year Dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Smooth Scroll to Top
+    const backToTopButton = document.getElementById('back-to-top');
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    </script>
+    <script>
+        // Visitor Counter Functionality
+        const visitorCountElement = document.getElementById('visitor-count');
+    
+        // Get the current count from local storage or initialize to 0
+        let visitorCount = localStorage.getItem('visitorCount') || 0;
+    
+        // Increment the count
+        visitorCount++;
+    
+        // Update the local storage
+        localStorage.setItem('visitorCount', visitorCount);
+    
+        // Function to animate the count increment
+        const animateCount = (element, endValue) => {
+            let startValue = 0;
+            const duration = 1000; // Duration of animation in milliseconds
+            const increment = endValue / (duration / 20); // Calculate increment for smooth transition
+    
+            const counterInterval = setInterval(() => {
+                startValue += increment;
+                if (startValue >= endValue) {
+                    element.textContent = Math.round(endValue);
+                    clearInterval(counterInterval);
+                } else {
+                    element.textContent = Math.round(startValue);
+                }
+            }, 20);
+        };
+    
+        // Animate the count display
+        animateCount(visitorCountElement, visitorCount);
+    </script>
+    
+    </script>
+</body>
+</html>
